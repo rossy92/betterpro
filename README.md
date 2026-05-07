@@ -14,6 +14,8 @@ MediaFlow Proxy is a streaming proxy for HTTP(S), HLS (M3U8), and MPEG-DASH—in
 docker run -p 8888:8888 -e API_PASSWORD=your_password mhdzumair/mediaflow-proxy
 ```
 
+> Prefer not to self-host? A managed MediaFlow Proxy instance is available via [ElfHosted](https://store.elfhosted.com/product/mediaflow-proxy-2x4k-booster/?utm_source=github&utm_medium=readme&utm_campaign=mediaflow-proxy-readme), bundled with debrid and Stremio addons in their streaming personal-stacks (7-day trial).
+
 ## Highlights
 
 - DASH (ClearKey) to HLS, HLS manipulation, generic HTTP(S) proxy with custom headers  
@@ -28,6 +30,10 @@ docker run -p 8888:8888 -e API_PASSWORD=your_password mhdzumair/mediaflow-proxy
 | User & operator manual | [Documentation site](https://mhdzumair.github.io/mediaflow-proxy/) |
 | Markdown sources | [`docs/`](docs/) in this repository |
 | Build docs locally | `uv sync --group docs` then `uv run mkdocs serve` |
+
+## High-throughput alternative ⚡
+
+For lower memory usage and higher throughput — especially on constrained hardware (small VPS, NAS, Raspberry Pi) — see **[MediaFlow Proxy Light](https://github.com/mhdzumair/mediaflow-proxy-light)**, a Rust reimplementation that is fully API-compatible with this proxy. Benchmarks show 7–8× less memory, 1.7–3.4× less CPU per request, and up to 4× higher throughput. Existing tokens, encrypted URLs, and client integrations work without changes.
 
 ## Contributing
 
